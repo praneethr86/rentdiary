@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       drawer: DrawerWidget(),
       appBar: buildAppBar(),
       body: Body(),
-      // bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 

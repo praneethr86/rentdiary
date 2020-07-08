@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rentdiary/constants.dart';
+import 'package:rentdiary/screens/payment/payment_form.dart';
+import 'package:rentdiary/screens/propdetails/property_details.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -83,11 +85,21 @@ class PropertyListTile extends StatelessWidget {
               children: [
                 FlatButton(
                   child: Text('Add Payment'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentForm()),
+                    );
+                  },
                 ),
                 FlatButton(
                   child: Text('View Details'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PropertyDetails()));
+                  },
                 )
               ],
             )

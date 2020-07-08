@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rentdiary/components/bottom_nav_bar.dart';
-import 'package:rentdiary/components/drawer.dart';
 
 import 'components/body.dart';
 
@@ -8,7 +7,6 @@ class TenantDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerWidget(),
       appBar: buildAppBar(),
       body: Body(),
       bottomNavigationBar: BottomNavBar(),

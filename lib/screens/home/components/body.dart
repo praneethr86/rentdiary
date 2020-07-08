@@ -88,7 +88,12 @@ class PropertyListTile extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PaymentForm()),
+                      MaterialPageRoute(
+                        builder: (context) => PaymentForm(
+                          propName: title,
+                          tenantName: subtitle,
+                        ),
+                      ),
                     );
                   },
                 ),
@@ -96,9 +101,10 @@ class PropertyListTile extends StatelessWidget {
                   child: Text('View Details'),
                   onPressed: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => PropertyDetails()));
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PropertyDetails()),
+                    );
                   },
                 )
               ],

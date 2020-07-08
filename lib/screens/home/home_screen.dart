@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
+      elevation: 0,
       title: Text('Rent Diary',
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24)),

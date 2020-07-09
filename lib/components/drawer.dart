@@ -12,25 +12,47 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(children: [
         DrawerHeader(
-          child: Text('Menu',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(Icons.nature_people, size: 48, color: Colors.white),
+              Text('Rent Diary',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ],
+          ),
           decoration: BoxDecoration(color: kPrimaryColor),
         ),
         ListTile(
+          leading: Icon(Icons.account_circle),
           title: Text('Profile'),
           onTap: () {
             Navigator.pop(context);
           },
+          trailing: Icon(Icons.arrow_right),
         ),
         ListTile(
-          title: Text('Theme'),
+          leading: Icon(Icons.notifications),
+          title: Text('Notifications'),
           onTap: () {
             Navigator.pop(context);
           },
+          trailing: Icon(Icons.arrow_right),
         ),
         ListTile(
-          title: Text('About'),
+          leading: Icon(Icons.settings),
+          title: Text('Settings'),
+          onTap: () {
+            Navigator.pop(context);
+          },
+          trailing: Icon(Icons.arrow_right),
+        ),
+        ListTile(
+          leading: Icon(Icons.exit_to_app),
+          title: Text('Logout'),
           onTap: () {
             Navigator.pop(context);
           },

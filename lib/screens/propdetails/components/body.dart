@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
           TenantButtonRow(),
           Divider(),
           TransactionTable(),
-          // Container(), // Button
+          // Container(), // Button to add transaction
         ],
       ),
     );

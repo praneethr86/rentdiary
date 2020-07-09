@@ -16,8 +16,8 @@ class BottomNavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(Icons.account_balance, color: kBackgroundColor, size: 32),
-            Icon(Icons.pie_chart, color: kBackgroundColor, size: 32),
-            Icon(Icons.people, color: kBackgroundColor, size: 32),
+            Icon(Icons.assessment, color: kBackgroundColor, size: 32),
+            // Icon(Icons.people, color: kBackgroundColor, size: 32),
             Icon(Icons.settings, color: kBackgroundColor, size: 32),
           ],
         ));

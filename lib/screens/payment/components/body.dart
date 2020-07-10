@@ -85,6 +85,29 @@ class _PaymentFormState extends State<PaymentForm> {
               padding: const EdgeInsets.only(
                   top: kDefaultPadding * 2,
                   left: kDefaultPadding * 4,
+                  right: kDefaultPadding * 2),
+              child: Row(
+                children: [
+                  Text('Select: '),
+                  Radio(
+                    value: 0,
+                    groupValue: null,
+                    onChanged: null,
+                  ),
+                  Text('Rent'),
+                  Radio(
+                    value: 0,
+                    groupValue: null,
+                    onChanged: null,
+                  ),
+                  Text('Expense')
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: kDefaultPadding,
+                  left: kDefaultPadding * 4,
                   right: kDefaultPadding * 4),
               child: TextFormField(
                 decoration: const InputDecoration(
@@ -102,12 +125,25 @@ class _PaymentFormState extends State<PaymentForm> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: kDefaultPadding * 2,
+                  top: kDefaultPadding,
                   left: kDefaultPadding * 4,
-                  right: kDefaultPadding * 4,
+                  right: kDefaultPadding * 4),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  icon: Icon(Icons.insert_comment,
+                      color: kPrimaryColor, size: 24),
+                  hintText: 'Enter comments',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: kDefaultPadding * 2,
+                  left: kDefaultPadding * 3.5,
+                  right: kDefaultPadding * 5,
                   bottom: kDefaultPadding * 3),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Icon(
@@ -149,3 +185,5 @@ class _PaymentFormState extends State<PaymentForm> {
         ));
   }
 }
+
+//TODO: image_picker

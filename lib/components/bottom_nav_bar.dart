@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rentdiary/constants.dart';
+import 'package:rentdiary/screens/home/home_screen.dart';
+import 'package:rentdiary/screens/reports/reports.dart';
 
 class BottomNavBar extends StatelessWidget {
   @override
@@ -15,10 +17,39 @@ class BottomNavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.account_balance, color: kBackgroundColor, size: 32),
-            Icon(Icons.assessment, color: kBackgroundColor, size: 32),
-            // Icon(Icons.people, color: kBackgroundColor, size: 32),
-            Icon(Icons.settings, color: kBackgroundColor, size: 32),
+            IconButton(
+              icon: Icon(Icons.dashboard, color: kBackgroundColor, size: 32),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.bubble_chart, color: kBackgroundColor, size: 32),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ReportsScreen(),
+                  ),
+                );
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.settings, color: kBackgroundColor, size: 32),
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => SettingsScreen(),
+                //   ),
+                // );
+              },
+            ),
           ],
         ));
   }

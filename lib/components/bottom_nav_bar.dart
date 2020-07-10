@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentdiary/constants.dart';
 import 'package:rentdiary/screens/home/home_screen.dart';
 import 'package:rentdiary/screens/reports/reports.dart';
+import 'package:rentdiary/screens/settings/settings.dart';
 
 class BottomNavBar extends StatelessWidget {
   @override
@@ -42,12 +43,12 @@ class BottomNavBar extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.settings, color: kBackgroundColor, size: 32),
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => SettingsScreen(),
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsScreen(),
+                  ),
+                );
               },
             ),
           ],

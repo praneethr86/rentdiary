@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rentdiary/screens/settings/settings.dart';
 
 import '../constants.dart';
 
@@ -37,16 +38,22 @@ class DrawerWidget extends StatelessWidget {
         ListTile(
           leading: Icon(Icons.notifications),
           title: Text('Notifications'),
-          onTap: () {
-            Navigator.pop(context);
-          },
-          trailing: Icon(Icons.arrow_right),
+          trailing: Switch(
+            value: true,
+            onChanged: null,
+            activeColor: Colors.green,
+          ),
         ),
         ListTile(
           leading: Icon(Icons.settings),
           title: Text('Settings'),
           onTap: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SettingsScreen(),
+              ),
+            );
           },
           trailing: Icon(Icons.arrow_right),
         ),

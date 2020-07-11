@@ -29,7 +29,7 @@ class DrawerWidget extends StatelessWidget {
         ),
         ListTile(
           leading: Icon(Icons.account_circle),
-          title: Text('Profile'),
+          title: Text('My Profile'),
           onTap: () {
             Navigator.pop(context);
           },

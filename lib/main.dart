@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rentdiary/constants.dart';
+// import 'package:rentdiary/screens/loginscreen.dart';
 
 import 'screens/home/home_screen.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
+      // home: LoginScreen(),
     );
   }
 }
